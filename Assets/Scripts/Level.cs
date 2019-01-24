@@ -11,7 +11,10 @@ public class Level : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (breakableBlocks <= 0)
+        {
+            FindObjectOfType<SceneLoader>().LoadNextScene();
+        }
 	}
 
     public void IncrementBlocks() {
